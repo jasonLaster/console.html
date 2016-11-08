@@ -1,1 +1,3 @@
 .DS_Store
+assets/build
+node_modules

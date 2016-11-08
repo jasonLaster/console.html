@@ -5,10 +5,14 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 "use strict";
+//
+// const WebConsoleUtils = require("devtools/client/webconsole/utils").Utils;
+// const STRINGS_URI = "devtools/client/locales/webconsole.properties";
+// const l10n = new WebConsoleUtils.L10n(STRINGS_URI);
 
-const WebConsoleUtils = require("devtools/client/webconsole/utils").Utils;
-const STRINGS_URI = "devtools/client/locales/webconsole.properties";
-const l10n = new WebConsoleUtils.L10n(STRINGS_URI);
+const l10n = {
+  getStr: () => {}
+}
 
 const {
   MESSAGE_SOURCE,
