@@ -25,6 +25,7 @@
     "babel-register": "^6.18.0",
     "devtools-local-toolbox": "^0.0.6",
     "devtools-modules": "^0.0.3",
+    "devtools-sham-modules": "^0.0.3",
     "immutable": "^3.8.1",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",

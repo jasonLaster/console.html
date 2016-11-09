@@ -12,8 +12,10 @@ const {
   DOM: dom,
   PropTypes
 } = require("devtools/client/shared/vendor/react");
-const { PluralForm } = require("devtools/shared/plural-form");
+// const { PluralForm } = require("devtools/shared/plural-form");
 const { l10n } = require("devtools/client/webconsole/new-console-output/utils/messages");
+
+const PluralForm = {get:() => {}};
 
 MessageRepeat.displayName = "MessageRepeat";
 
