@@ -26,11 +26,10 @@ const toolbox = {}
 window.app =  new NewConsoleOutputWrapper(el, jsterm, toolbox, window, document);
 app.init();
 
-
 window.eval = function(input) {
   client.evaluate(input).then(r => {
     app.dispatchMessageAdd(r)
   })
 }
 
-bootstrap(React, ReactDOM, app);
+bootstrap(React, ReactDOM, app.parentNode);

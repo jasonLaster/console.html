@@ -12,7 +12,6 @@ if (typeof define === "undefined") {
   require("amd-loader");
 }
 
-
 // React
 const {
   createFactory,
