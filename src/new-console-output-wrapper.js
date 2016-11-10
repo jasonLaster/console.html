@@ -80,27 +80,28 @@ NewConsoleOutputWrapper.prototype = {
 
   dispatchMessageAdd: function (message, waitForResponse) {
     let action = actions.messageAdd(message);
-    batchedMessageAdd(action);
-
-    // Wait for the message to render to resolve with the DOM node.
-    // This is just for backwards compatibility with old tests, and should
-    // be removed once it's not needed anymore.
-    // Can only wait for response if the action contains a valid message.
-    if (waitForResponse && action.message) {
-      let messageId = action.message.get("id");
-      return new Promise(resolve => {
-        let jsterm = this.jsterm;
-        jsterm.hud.on("new-messages", function onThisMessage(e, messages) {
-          for (let m of messages) {
-            if (m.messageId == messageId) {
-              resolve(m.node);
-              jsterm.hud.off("new-messages", onThisMessage);
-              return;
-            }
-          }
-        });
-      });
-    }
+    store.dispatch(action)
+    // batchedMessageAdd(action);
+    //
+    // // Wait for the message to render to resolve with the DOM node.
+    // // This is just for backwards compatibility with old tests, and should
+    // // be removed once it's not needed anymore.
+    // // Can only wait for response if the action contains a valid message.
+    // if (waitForResponse && action.message) {
+    //   let messageId = action.message.get("id");
+    //   return new Promise(resolve => {
+    //     let jsterm = this.jsterm;
+    //     jsterm.hud.on("new-messages", function onThisMessage(e, messages) {
+    //       for (let m of messages) {
+    //         if (m.messageId == messageId) {
+    //           resolve(m.node);
+    //           jsterm.hud.off("new-messages", onThisMessage);
+    //           return;
+    //         }
+    //       }
+    //     });
+    //   });
+    // }
 
     return Promise.resolve();
   },
@@ -123,6 +124,7 @@ function batchedMessageAdd(action) {
   queuedActions.push(action);
   if (!throttledDispatchTimeout) {
     throttledDispatchTimeout = setTimeout(() => {
+      debugger
       store.dispatch(actions.batchActions(queuedActions));
       queuedActions = [];
       throttledDispatchTimeout = null;

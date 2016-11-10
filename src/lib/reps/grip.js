@@ -1,3 +1,3 @@
-const { grip } = require("devtools-modules");
+const { Grip } = require("devtools-modules");
 
-module.exports = grip;
+module.exports = Grip;

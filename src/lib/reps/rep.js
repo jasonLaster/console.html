@@ -1,3 +1,3 @@
-const { rep } = require("devtools-modules");
+const { Rep } = require("devtools-modules");
 
-module.exports = rep;
+module.exports = Rep;

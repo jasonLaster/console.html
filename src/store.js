@@ -18,7 +18,14 @@ const {
   PREFS,
 } = require("devtools/client/webconsole/new-console-output/constants");
 const { reducers } = require("./reducers/index");
-const Services = require("Services");
+// const Services = require("Services");
+
+const Services = {
+  prefs: {
+    getIntPref: () => 100,
+    getBoolPref: () => true
+  }
+}
 
 function configureStore() {
   const initialState = {
@@ -41,7 +48,8 @@ function configureStore() {
   return createStore(
     combineReducers(reducers),
     initialState,
-    compose(applyMiddleware(thunk), enableBatching())
+    // compose(applyMiddleware(thunk), enableBatching())
+    applyMiddleware(thunk)
   );
 }
 
@@ -71,4 +79,3 @@ function enableBatching() {
 // Provide the store factory for test code so that each test is working with
 // its own instance.
 module.exports.configureStore = configureStore;
-

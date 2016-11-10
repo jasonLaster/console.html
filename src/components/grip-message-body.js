@@ -12,16 +12,19 @@ if (typeof define === "undefined") {
   require("amd-loader");
 }
 
+
 // React
 const {
   createFactory,
   PropTypes
 } = require("devtools/client/shared/vendor/react");
 const { createFactories } = require("devtools/client/shared/components/reps/rep-utils");
-const { Rep } = createFactories(require("devtools/client/shared/components/reps/rep"));
-const StringRep = createFactories(require("devtools/client/shared/components/reps/string").StringRep).rep;
+let Rep = createFactory(require("devtools/client/shared/components/reps/rep"));
+
+const StringRep = createFactories(require("devtools/client/shared/components/reps/string")).rep;
+
 const VariablesViewLink = createFactory(require("devtools/client/webconsole/new-console-output/components/variables-view-link"));
-const { Grip } = require("devtools/client/shared/components/reps/grip");
+const Grip = require("devtools/client/shared/components/reps/grip");
 
 GripMessageBody.displayName = "GripMessageBody";
 

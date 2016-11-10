@@ -1,11 +1,11 @@
-const {webpackConfig: toolboxConfig} = require("devtools-local-toolbox");
+const {toolboxConfig} = require("devtools-local-toolbox/index");
 
 const path = require("path");
 const projectPath = path.join(__dirname, "src");
 
 let webpackConfig = {
   entry: {
-    bundle: [path.join(projectPath, "new-console-output-wrapper.js")],
+    bundle: [path.join(projectPath, "toolbox.js")],
   },
 
   output: {
