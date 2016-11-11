@@ -9,9 +9,9 @@ function getConfig() {
   return developmentConfig;
 }
 
-const devConfig = getConfig();
-feature.setConfig(devConfig);
+const envConfig = getConfig();
+feature.setConfig(envConfig);
 
-const webpackConfig = require("../webpack.config");
+const webpackConfig = require("../webpack.config")(envConfig);
 
-toolbox.startDevServer(devConfig, webpackConfig);
+toolbox.startDevServer(envConfig, webpackConfig);
