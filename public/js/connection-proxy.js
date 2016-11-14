@@ -1,4 +1,20 @@
-const Services = require("Services");
+const { prefs } = require("./utils/prefs");
+
+const PREF_CONNECTION_TIMEOUT = "devtools.debugger.remote-timeout";
+
+function defer() {
+  let resolve, reject;
+  let promise = new Promise(function() {
+    resolve = arguments[0];
+    reject = arguments[1];
+  });
+  return {
+    resolve: resolve,
+    reject: reject,
+    promise: promise
+  };
+};
+
 
 // Web Console connection proxy
 
@@ -109,12 +125,10 @@ WebConsoleConnectionProxy.prototype = {
       return this._connectDefer.promise;
     }
 
-    this._connectDefer = promise.defer();
+    this._connectDefer = defer();
 
-    let timeout = Services.prefs.getIntPref(PREF_CONNECTION_TIMEOUT);
-    // this._connectTimer = Cc["@mozilla.org/timer;1"].createInstance(Ci.nsITimer);
-    // this._connectTimer.initWithCallback(this._connectionTimeout,
-    //                                     timeout, Ci.nsITimer.TYPE_ONE_SHOT);
+    let timeout = prefs.debuggerRemoteTimeout;
+    window.setTimeout(this._connectionTimeout, timeout);
 
     let connPromise = this._connectDefer.promise;
     connPromise.then(() => {
@@ -146,9 +160,9 @@ WebConsoleConnectionProxy.prototype = {
       let tab = this.target.form;
       this.webConsoleFrame.onLocationChange(tab.url, tab.title);
     }
-    this._attachConsole();
 
-    return connPromise;
+    // this._attachConsole();
+    // return connPromise;
   },
 
   /**
@@ -457,7 +471,7 @@ WebConsoleConnectionProxy.prototype = {
       return this._disconnecter.promise;
     }
 
-    this._disconnecter = promise.defer();
+    this._disconnecter = defer();
 
     if (!this.client) {
       this._disconnecter.resolve(null);

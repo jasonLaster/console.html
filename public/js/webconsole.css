@@ -69,7 +69,7 @@ a {
 
 .message > .icon::before {
   content: "";
-  background-image: url(chrome://devtools/skin/images/webconsole.svg);
+  /*background-image: url(chrome://devtools/skin/images/webconsole.svg);*/
   background-position: 12px 12px;
   background-repeat: no-repeat;
   background-size: 72px 60px;
@@ -79,7 +79,7 @@ a {
 }
 
 .theme-light .message > .icon::before {
-  background-image: url(chrome://devtools/skin/images/webconsole.svg#light-icons);
+  /*background-image: url(chrome://devtools/skin/images/webconsole.svg#light-icons);*/
 }
 
 .message > .message-body-wrapper {
@@ -596,7 +596,7 @@ a.learn-more-link.webconsole-learn-more-link {
 
 /* Open DOMNode in inspector button */
 .open-inspector {
-  background: url("chrome://devtools/skin/images/vview-open-inspector.png") no-repeat 0 0;
+  /*background: url("chrome://devtools/skin/images/vview-open-inspector.png") no-repeat 0 0;*/
   padding-left: 16px;
   margin-left: 5px;
   cursor: pointer;
@@ -604,12 +604,12 @@ a.learn-more-link.webconsole-learn-more-link {
 
 .elementNode:hover .open-inspector,
 .open-inspector:hover {
-  filter: url(images/filters.svg#checked-icon-state);
+  /*filter: url(images/filters.svg#checked-icon-state);*/
 }
 
 .elementNode:hover .open-inspector:active,
 .open-inspector:active {
-  filter: url(images/filters.svg#checked-icon-state) brightness(0.9);
+  /*filter: url(images/filters.svg#checked-icon-state) brightness(0.9);*/
 }
 
 @media (max-width: 500px) {
