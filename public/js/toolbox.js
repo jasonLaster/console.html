@@ -32,6 +32,10 @@ if (!isFirefoxPanel()) {
 }
 
 function onConnect({client}) {
+  if (!client) {
+    return;
+  }
+
   const tabTarget = client.getTabTarget();
   const connectionProxy = new WebConsoleConnectionProxy(ConsoleFrame, tabTarget)
   connectionProxy.connect();
@@ -45,7 +49,7 @@ app = new NewConsoleOutputWrapper(
 app.init();
 
 window.eval = function(input) {
-  client.evaluate(input).then(r => {
+  client.evaluate(input, {}).then(r => {
     app.dispatchMessageAdd(r)
   })
 }

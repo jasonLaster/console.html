@@ -10,9 +10,9 @@ module.exports = envConfig => {
     },
 
     output: {
-      path: path.join(__dirname, "public/build"),
+      path: path.join(__dirname, "assets/build"),
       filename: "[name].js",
-      publicPath: "/public/build"
+      publicPath: "/assets/build"
     }
   };
 
