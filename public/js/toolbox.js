@@ -8,7 +8,7 @@ require("./reps.css")
 
 const {
   client: { getClient, firefox },
-  renderRoot, bootstrap
+  renderRoot, bootstrap, L10N
 } = require("devtools-local-toolbox");
 
 const { getValue, isFirefoxPanel } = require("devtools-config");
@@ -31,7 +31,7 @@ if (!isFirefoxPanel()) {
   window.l10n = L10N;
 }
 
-function onConnect({client}) {
+function onConnect({client} = {}) {
   if (!client) {
     return;
   }
