@@ -9,9 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "devtools-local-toolbox": "../debugger.html/packages/devtools-local-toolbox",
-    "devtools-modules": "^0.0.8",
-    "devtools-sham-modules": "^0.0.8",
-    "devtools-config": "0.0.8"
+    "devtools-local-toolbox": "0.0.9",
+    "devtools-modules": "^0.0.9",
+    "devtools-sham-modules": "^0.0.9",
+    "devtools-config": "0.0.9"
   }
 }
