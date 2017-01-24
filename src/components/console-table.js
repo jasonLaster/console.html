@@ -8,12 +8,12 @@ const {
   createFactory,
   DOM: dom,
   PropTypes
-} = require("devtools/client/shared/vendor/react");
+} = require("react");
 const { ObjectClient } = require("devtools/shared/client/main");
-const actions = require("devtools/client/webconsole/new-console-output/actions/messages");
-const {l10n} = require("devtools/client/webconsole/new-console-output/utils/messages");
+const actions = require("../actions/messages");
+const {l10n} = require("../utils/messages");
 
-const GripMessageBody = createFactory(require("devtools/client/webconsole/new-console-output/components/grip-message-body"));
+const GripMessageBody = createFactory(require("./grip-message-body"));
 
 const TABLE_ROW_MAX_ITEMS = 1000;
 const TABLE_COLUMN_MAX_ITEMS = 10;

@@ -7,7 +7,7 @@ const expect = require("expect");
 const { render } = require("enzyme");
 
 // React
-const { createFactory } = require("devtools/client/shared/vendor/react");
+const { createFactory } = require("react");
 
 // Components under test.
 const NetworkEventMessage = createFactory(require("devtools/client/webconsole/new-console-output/components/message-types/network-event-message"));

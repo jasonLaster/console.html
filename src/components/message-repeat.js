@@ -11,9 +11,9 @@
 const {
   DOM: dom,
   PropTypes
-} = require("devtools/client/shared/vendor/react");
+} = require("react");
 // const { PluralForm } = require("devtools/shared/plural-form");
-const { l10n } = require("devtools/client/webconsole/new-console-output/utils/messages");
+const { l10n } = require("../utils/messages");
 
 const PluralForm = {get:() => {}};
 

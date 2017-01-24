@@ -11,12 +11,12 @@ const {
   createClass,
   createFactory,
   PropTypes
-} = require("devtools/client/shared/vendor/react");
+} = require("react");
 
 const {
   MESSAGE_SOURCE,
   MESSAGE_TYPE
-} = require("devtools/client/webconsole/new-console-output/constants");
+} = require("../constants");
 
 const componentMap = new Map([
   ["ConsoleApiCall", require("./message-types/console-api-call")],

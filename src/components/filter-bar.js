@@ -8,17 +8,17 @@ const {
   createClass,
   DOM: dom,
   PropTypes
-} = require("devtools/client/shared/vendor/react");
-const { connect } = require("devtools/client/shared/vendor/react-redux");
-const { getAllFilters } = require("devtools/client/webconsole/new-console-output/selectors/filters");
-const { getAllUi } = require("devtools/client/webconsole/new-console-output/selectors/ui");
-const { filterTextSet, filtersClear } = require("devtools/client/webconsole/new-console-output/actions/index");
-const { messagesClear } = require("devtools/client/webconsole/new-console-output/actions/index");
-const uiActions = require("devtools/client/webconsole/new-console-output/actions/index");
+} = require("react");
+const { connect } = require("react-redux");
+const { getAllFilters } = require("../selectors/filters");
+const { getAllUi } = require("../selectors/ui");
+const { filterTextSet, filtersClear } = require("../actions/index");
+const { messagesClear } = require("../actions/index");
+const uiActions = require("../actions/index");
 const {
   MESSAGE_LEVEL
 } = require("../constants");
-const FilterButton = createFactory(require("devtools/client/webconsole/new-console-output/components/filter-button"));
+const FilterButton = createFactory(require("./filter-button"));
 
 const FilterBar = createClass({
 

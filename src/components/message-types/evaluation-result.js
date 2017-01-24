@@ -10,9 +10,9 @@
 const {
   createFactory,
   PropTypes
-} = require("devtools/client/shared/vendor/react");
-const Message = createFactory(require("devtools/client/webconsole/new-console-output/components/message"));
-const GripMessageBody = createFactory(require("devtools/client/webconsole/new-console-output/components/grip-message-body"));
+} = require("react");
+const Message = createFactory(require("../message"));
+const GripMessageBody = createFactory(require("../grip-message-body"));
 
 EvaluationResult.displayName = "EvaluationResult";
 

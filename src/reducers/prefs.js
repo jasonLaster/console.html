@@ -5,7 +5,7 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 "use strict";
 
-const Immutable = require("devtools/client/shared/vendor/immutable");
+const Immutable = require("immutable");
 const PrefState = Immutable.Record({
   logLimit: 1000
 });

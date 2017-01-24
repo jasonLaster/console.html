@@ -11,7 +11,7 @@ const {
   createClass,
   DOM: dom,
   PropTypes,
-} = require("devtools/client/shared/vendor/react");
+} = require("react");
 
 const INDENT_WIDTH = 12;
 const MessageIndent = createClass({

@@ -13,10 +13,10 @@ requireHacker.global_hook("default", path => {
       return `const React = require('react-dev'); module.exports = React.addons.TestUtils`;
     // Use react-dev. This would be handled by browserLoader in Firefox.
     case "react":
-    case "devtools/client/shared/vendor/react":
+    case "react":
       return `const React = require('react-dev'); module.exports = React`;
     // For Rep's use of AMD
-    case "devtools/client/shared/vendor/react.default":
+    case "react.default":
       return `const React = require('react-dev'); module.exports = React`;
   }
 

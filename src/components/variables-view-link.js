@@ -10,8 +10,8 @@
 const {
   DOM: dom,
   PropTypes
-} = require("devtools/client/shared/vendor/react");
-const {openVariablesView} = require("devtools/client/webconsole/new-console-output/utils/variables-view");
+} = require("react");
+const {openVariablesView} = require("../utils/variables-view");
 
 VariablesViewLink.displayName = "VariablesViewLink";
 

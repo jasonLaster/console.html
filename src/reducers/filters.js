@@ -5,8 +5,8 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 "use strict";
 
-const Immutable = require("devtools/client/shared/vendor/immutable");
-const constants = require("devtools/client/webconsole/new-console-output/constants");
+const Immutable = require("immutable");
+const constants = require("../constants");
 
 const FilterState = Immutable.Record({
   debug: true,

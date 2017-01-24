@@ -16,7 +16,7 @@ if (typeof define === "undefined") {
 const {
   createFactory,
   PropTypes
-} = require("devtools/client/shared/vendor/react");
+} = require("react");
 
 const reps = require("devtools-reps");
 const Rep = createFactory(reps.REPS.Rep);
@@ -24,7 +24,7 @@ const StringRep = createFactory(reps.REPS.StringRep);
 const Grip = createFactory(reps.REPS.Grip.rep);
 const LONG = reps.MODE.LONG;
 
-const VariablesViewLink = createFactory(require("devtools/client/webconsole/new-console-output/components/variables-view-link"));
+const VariablesViewLink = createFactory(require("./variables-view-link"));
 
 GripMessageBody.displayName = "GripMessageBody";
 

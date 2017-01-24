@@ -11,7 +11,7 @@ const {
   combineReducers,
   compose,
   createStore
-} = require("devtools/client/shared/vendor/redux");
+} = require("redux");
 const { thunk } = require("devtools/client/shared/redux/middleware/thunk");
 const {
   BATCH_ACTIONS,

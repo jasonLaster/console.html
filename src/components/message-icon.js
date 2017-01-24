@@ -10,8 +10,8 @@
 const {
   DOM: dom,
   PropTypes
-} = require("devtools/client/shared/vendor/react");
-const {l10n} = require("devtools/client/webconsole/new-console-output/utils/messages");
+} = require("react");
+const {l10n} = require("../utils/messages");
 
 MessageIcon.displayName = "MessageIcon";
 

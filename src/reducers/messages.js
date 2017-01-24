@@ -5,9 +5,9 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 "use strict";
 
-const Immutable = require("devtools/client/shared/vendor/immutable");
-const constants = require("devtools/client/webconsole/new-console-output/constants");
-const {isGroupType} = require("devtools/client/webconsole/new-console-output/utils/messages");
+const Immutable = require("immutable");
+const constants = require("../constants");
+const {isGroupType} = require("../utils/messages");
 
 const MessageState = Immutable.Record({
   // List of all the messages added to the console.

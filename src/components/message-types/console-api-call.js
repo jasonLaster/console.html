@@ -11,12 +11,12 @@ const {
   createFactory,
   DOM: dom,
   PropTypes
-} = require("devtools/client/shared/vendor/react");
-const GripMessageBody = createFactory(require("devtools/client/webconsole/new-console-output/components/grip-message-body"));
-const ConsoleTable = createFactory(require("devtools/client/webconsole/new-console-output/components/console-table"));
-const {isGroupType, l10n} = require("devtools/client/webconsole/new-console-output/utils/messages");
+} = require("react");
+const GripMessageBody = createFactory(require("../grip-message-body"));
+const ConsoleTable = createFactory(require("../console-table"));
+const {isGroupType, l10n} = require("../../utils/messages");
 
-const Message = createFactory(require("devtools/client/webconsole/new-console-output/components/message"));
+const Message = createFactory(require("../message"));
 
 ConsoleApiCall.displayName = "ConsoleApiCall";
 
@@ -129,4 +129,3 @@ function formatReps(parameters, userProvidedStyles, serviceContainer) {
 }
 
 module.exports = ConsoleApiCall;
-

@@ -3,8 +3,8 @@
 
 "use strict";
 
-let ReactDOM = require("devtools/client/shared/vendor/react-dom");
-let React = require("devtools/client/shared/vendor/react");
+let ReactDOM = require("react-dom");
+let React = require("react");
 var TestUtils = React.addons.TestUtils;
 
 const actions = require("devtools/client/webconsole/new-console-output/actions/index");

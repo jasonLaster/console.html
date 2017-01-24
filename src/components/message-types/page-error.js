@@ -10,8 +10,8 @@
 const {
   createFactory,
   PropTypes
-} = require("devtools/client/shared/vendor/react");
-const Message = createFactory(require("devtools/client/webconsole/new-console-output/components/message"));
+} = require("react");
+const Message = createFactory(require("../message"));
 
 PageError.displayName = "PageError";
 

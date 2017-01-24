@@ -11,9 +11,9 @@ const {
   createFactory,
   DOM: dom,
   PropTypes
-} = require("devtools/client/shared/vendor/react");
-const Message = createFactory(require("devtools/client/webconsole/new-console-output/components/message"));
-const { l10n } = require("devtools/client/webconsole/new-console-output/utils/messages");
+} = require("react");
+const Message = createFactory(require("../message"));
+const { l10n } = require("../../utils/messages");
 
 NetworkEventMessage.displayName = "NetworkEventMessage";
 

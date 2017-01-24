@@ -8,18 +8,18 @@ const {
   createFactory,
   DOM: dom,
   PropTypes
-} = require("devtools/client/shared/vendor/react");
-const ReactDOM = require("devtools/client/shared/vendor/react-dom");
-const { connect } = require("devtools/client/shared/vendor/react-redux");
+} = require("react");
+const ReactDOM = require("react-dom");
+const { connect } = require("react-redux");
 
 const {
   getAllMessages,
   getAllMessagesUiById,
   getAllMessagesTableDataById,
   getAllGroupsById,
-} = require("devtools/client/webconsole/new-console-output/selectors/messages");
-const { getScrollSetting } = require("devtools/client/webconsole/new-console-output/selectors/ui");
-const MessageContainer = createFactory(require("devtools/client/webconsole/new-console-output/components/message-container").MessageContainer);
+} = require("../selectors/messages");
+const { getScrollSetting } = require("../selectors/ui");
+const MessageContainer = createFactory(require("./message-container").MessageContainer);
 
 const ConsoleOutput = createClass({
 

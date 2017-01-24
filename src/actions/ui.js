@@ -6,13 +6,13 @@
 
 "use strict";
 
-const { getAllUi } = require("devtools/client/webconsole/new-console-output/selectors/ui");
+const { getAllUi } = require("../selectors/ui");
 const Services = require("Services");
 
 const {
   FILTER_BAR_TOGGLE,
   PREFS,
-} = require("devtools/client/webconsole/new-console-output/constants");
+} = require("../constants");
 
 function filterBarToggle(show) {
   return (dispatch, getState) => {

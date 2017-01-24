@@ -8,9 +8,9 @@
 
 const {
   prepareMessage
-} = require("devtools/client/webconsole/new-console-output/utils/messages");
-const { IdGenerator } = require("devtools/client/webconsole/new-console-output/utils/id-generator");
-const { batchActions } = require("devtools/client/webconsole/new-console-output/actions/enhancers");
+} = require("../utils/messages");
+const { IdGenerator } = require("../utils/id-generator");
+const { batchActions } = require("../actions/enhancers");
 const {
   MESSAGE_ADD,
   MESSAGES_CLEAR,

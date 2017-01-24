@@ -11,9 +11,9 @@ const {
   createClass,
   DOM: dom,
   PropTypes,
-} = require("devtools/client/shared/vendor/react");
+} = require("react");
 
-const { l10n } = require("devtools/client/webconsole/new-console-output/utils/messages");
+const { l10n } = require("../utils/messages");
 
 const CollapseButton = createClass({
 

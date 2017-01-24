@@ -4,9 +4,9 @@
 "use strict";
 
 // React & Redux
-const React = require("devtools/client/shared/vendor/react");
-const ReactDOM = require("devtools/client/shared/vendor/react-dom");
-const { Provider } = require("devtools/client/shared/vendor/react-redux");
+const React = require("react");
+const ReactDOM = require("react-dom");
+const { Provider } = require("react-redux");
 
 const actions = require("devtools/client/webconsole/new-console-output/actions/index");
 const { configureStore } = require("devtools/client/webconsole/new-console-output/store");

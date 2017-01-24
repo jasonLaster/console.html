@@ -8,8 +8,8 @@
 const {
   FILTER_BAR_TOGGLE,
   MESSAGE_ADD,
-} = require("devtools/client/webconsole/new-console-output/constants");
-const Immutable = require("devtools/client/shared/vendor/immutable");
+} = require("../constants");
+const Immutable = require("immutable");
 
 const UiState = Immutable.Record({
   filterBarVisible: false,

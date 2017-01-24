@@ -12,14 +12,14 @@ const {
   createFactory,
   DOM: dom,
   PropTypes
-} = require("devtools/client/shared/vendor/react");
-const { l10n } = require("devtools/client/webconsole/new-console-output/utils/messages");
-const actions = require("devtools/client/webconsole/new-console-output/actions/index");
+} = require("react");
+const { l10n } = require("../utils/messages");
+const actions = require("../actions/index");
 
-const CollapseButton = createFactory(require("devtools/client/webconsole/new-console-output/components/collapse-button"));
-const MessageIndent = createFactory(require("devtools/client/webconsole/new-console-output/components/message-indent").MessageIndent);
-const MessageIcon = createFactory(require("devtools/client/webconsole/new-console-output/components/message-icon"));
-const MessageRepeat = createFactory(require("devtools/client/webconsole/new-console-output/components/message-repeat"));
+const CollapseButton = createFactory(require("./collapse-button"));
+const MessageIndent = createFactory(require("./message-indent").MessageIndent);
+const MessageIcon = createFactory(require("./message-icon"));
+const MessageRepeat = createFactory(require("./message-repeat"));
 
 const FrameView = createFactory(require("../lib/frame"));
 const StackTrace = createFactory(require("../lib/stack-trace"));

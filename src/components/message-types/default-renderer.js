@@ -9,7 +9,7 @@
 // React & Redux
 const {
   DOM: dom,
-} = require("devtools/client/shared/vendor/react");
+} = require("react");
 
 DefaultRenderer.displayName = "DefaultRenderer";
 

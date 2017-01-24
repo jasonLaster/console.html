@@ -6,7 +6,7 @@
 
 "use strict";
 
-const { getAllFilters } = require("devtools/client/webconsole/new-console-output/selectors/filters");
+const { getAllFilters } = require("../selectors/filters");
 const Services = require("Services");
 
 const {
@@ -14,7 +14,7 @@ const {
   FILTER_TOGGLE,
   FILTERS_CLEAR,
   PREFS,
-} = require("devtools/client/webconsole/new-console-output/constants");
+} = require("../constants");
 
 function filterTextSet(text) {
   return {
