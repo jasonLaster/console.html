@@ -17,13 +17,14 @@ const {
   createFactory,
   PropTypes
 } = require("devtools/client/shared/vendor/react");
-const { createFactories } = require("devtools/client/shared/components/reps/rep-utils");
-let Rep = createFactory(require("devtools/client/shared/components/reps/rep"));
 
-const StringRep = createFactories(require("devtools/client/shared/components/reps/string")).rep;
+const reps = require("devtools-reps");
+const Rep = createFactory(reps.REPS.Rep);
+const StringRep = createFactory(reps.REPS.StringRep);
+const Grip = createFactory(reps.REPS.Grip.rep);
+const LONG = reps.MODE.LONG;
 
 const VariablesViewLink = createFactory(require("devtools/client/webconsole/new-console-output/components/variables-view-link"));
-const Grip = require("devtools/client/shared/components/reps/grip");
 
 GripMessageBody.displayName = "GripMessageBody";
 
@@ -60,7 +61,7 @@ function GripMessageBody(props) {
         object: grip,
         objectLink: VariablesViewLink,
         defaultRep: Grip,
-        mode: props.mode,
+        mode: LONG,
       })
   );
 }

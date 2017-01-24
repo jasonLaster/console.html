@@ -1,17 +1,17 @@
 const fs = require("fs");
 const path = require("path");
 
-const toolbox = require("../node_modules/devtools-local-toolbox/index");
+const toolbox = require("devtools-launchpad/index");
 const feature = require("devtools-config");
+const getConfig = require("./getConfig");
 
-function getConfig() {
-  const developmentConfig = require("../configs/development.json");
-  return developmentConfig;
-}
 
 const envConfig = getConfig();
 feature.setConfig(envConfig);
 
-const webpackConfig = require("../webpack.config")(envConfig);
+let webpackConfig = require("../webpack.config");
 
-toolbox.startDevServer(envConfig, webpackConfig);
+let { app } = toolbox.startDevServer(envConfig, webpackConfig, __dirname);
+
+console.log("View debugger examples here:")
+console.log("https://github.com/devtools-html/debugger-examples")

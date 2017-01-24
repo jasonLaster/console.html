@@ -124,7 +124,6 @@ function batchedMessageAdd(action) {
   queuedActions.push(action);
   if (!throttledDispatchTimeout) {
     throttledDispatchTimeout = setTimeout(() => {
-      debugger
       store.dispatch(actions.batchActions(queuedActions));
       queuedActions = [];
       throttledDispatchTimeout = null;

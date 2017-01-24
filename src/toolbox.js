@@ -7,9 +7,8 @@ require("./webconsole.css")
 require("./reps.css")
 
 const {
-  client: { getClient, firefox },
-  renderRoot, bootstrap, L10N
-} = require("devtools-local-toolbox");
+   bootstrap, L10N
+} = require("devtools-launchpad");
 
 const { getValue, isFirefoxPanel } = require("devtools-config");
 
